@@ -83,7 +83,7 @@ const PopularJobs = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="text-primary-foreground font-medium text-sm mb-2 block">{job.title}</span>
-                  <Button variant="explore" size="sm">
+                  <Button variant="explore" size="sm" name="Explore">
                     Explore
                   </Button>
                 </div>
@@ -105,7 +105,7 @@ const PopularJobs = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="text-primary-foreground font-medium text-sm mb-2 block">{job.title}</span>
-                  <Button variant="explore" size="sm">
+                  <Button variant="explore" size="sm" name="Explore">
                     Explore
                   </Button>
                 </div>

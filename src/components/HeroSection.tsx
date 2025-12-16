@@ -49,7 +49,7 @@ const HeroSection = () => {
                   sm:px-2 sm:py-1 sm:text-xs"
                 style={{ minWidth: 0 }}
               />
-              <button className="p-4 text-[#00AEEA] hover:bg-[#e6f7fd] transition-colors">
+              <button  name="Search" className="p-4 text-[#00AEEA] hover:bg-[#e6f7fd] transition-colors">
                 <Search className="w-6 h-6" />
               </button>
             </div>

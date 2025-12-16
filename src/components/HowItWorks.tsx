@@ -43,7 +43,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="default" size="lg">
+          <Button variant="default" size="lg" name="Get Started">
             Get Started
           </Button>
         </div>

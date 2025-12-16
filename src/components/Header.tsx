@@ -53,6 +53,7 @@ const Header = () => {
             className="md:hidden ml-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Open menu"
+            name="menu"
           >
             <Menu className="w-7 h-7 text-[#00AEEA]" />
           </button>
