@@ -114,16 +114,19 @@ const PopularJobs = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-3 mt-8">
           {jobs.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-3 h-3 rounded-full transition-colors ${
+              className={`w-7 h-7 min-w-[24px] min-h-[24px] flex items-center justify-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary/60 ${
                 idx === current ? "bg-primary" : "bg-border"
               }`}
               aria-label={`Go to job ${idx + 1}`}
-            />
+              tabIndex={0}
+            >
+              <span className="sr-only">Go to job {idx + 1}</span>
+            </button>
           ))}
         </div>
       </div>

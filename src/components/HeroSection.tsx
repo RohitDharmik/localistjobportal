@@ -45,8 +45,7 @@ const HeroSection = () => {
               <input
                 type="text"
                 placeholder="Search for a service"
-                className="flex-1 px-3 py-2 text-[#222] placeholder-[#888] outline-none bg-transparent text-sm font-medium min-w-0
-                  sm:px-2 sm:py-1 sm:text-xs"
+                className="flex-1 px-6 py-2 text-[#222] placeholder-[#888] outline-none bg-transparent text-sm font-medium min-w-0"
                 style={{ minWidth: 0 }}
               />
               <button  name="Search" className="p-4 text-[#00AEEA] hover:bg-[#e6f7fd] transition-colors">
@@ -56,7 +55,7 @@ const HeroSection = () => {
           </div>
 
           <div className="space-y-4 pt-4 md:pt-12">
-            <h3 className="text-base font-semibold text-white mb-2">Popular Services:</h3>
+            <h2 className="text-base font-semibold text-white mb-2">Popular Services:</h2>
             <div className="flex flex-wrap gap-3">
               {popularServices.map((service) => (
                 <a
