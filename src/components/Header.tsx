@@ -1,4 +1,4 @@
-import { Search, Menu } from "lucide-react";
+import { Search, Menu, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -13,7 +13,8 @@ const Header = () => {
         <div className="flex items-center gap-10">
           <div className="flex items-center gap-2">
             {/* Pin icon for logo */}
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="mr-1"><circle cx="11" cy="11" r="11" fill="#00AEEA"/><circle cx="11" cy="11" r="5" fill="#fff"/></svg>
+            {/* < */}
+            <MapPin color="#00AEEA" />
             <span className="font-black text-2xl text-[#222] tracking-tight">localists</span>
           </div>
           <nav className="hidden md:flex items-center gap-7 text-[15px] font-medium text-[#222]">

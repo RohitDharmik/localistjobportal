@@ -45,7 +45,8 @@ const HeroSection = () => {
               <input
                 type="text"
                 placeholder="Search for a service"
-                className="flex-1 px-6 py-4 text-[#222] placeholder-[#888] outline-none bg-transparent text-base font-medium"
+                className="flex-1 px-3 py-2 text-[#222] placeholder-[#888] outline-none bg-transparent text-sm font-medium min-w-0
+                  sm:px-2 sm:py-1 sm:text-xs"
                 style={{ minWidth: 0 }}
               />
               <button className="p-4 text-[#00AEEA] hover:bg-[#e6f7fd] transition-colors">
