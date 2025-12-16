@@ -1,19 +1,21 @@
-import { FileText, MessageSquare, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { CompassIcon, File, User2 } from "lucide-react";
+import file from "../assets/file.png";
+import user from "../assets/user.png";
+import search from "../assets/search.png";
 const steps = [
   {
-    icon: FileText,
+    icon: file,
     title: "Fill in your details for your project",
     description: "Tell us about your project requirements",
   },
   {
-    icon: MessageSquare,
+    icon: user,
     title: "Receive quotes from Professionals",
     description: "Get competitive quotes from verified pros",
   },
   {
-    icon: ThumbsUp,
+    icon: search,
     title: "Compare your quotes and enjoy great savings",
     description: "Choose the best option for your budget",
   },
@@ -31,13 +33,17 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="text-center space-y-4 animate-slide-up"
+              className="text-center space-y-4 animate-slide-up px-5"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center">
-                <step.icon className="w-10 h-10 text-primary" />
+              <div className="border-2 border-[#C7D1D8] rounded-2xl bg-white flex flex-col items-center justify-center h-[240px] md:h-[260px] w-full max-w-[320px] mx-auto shadow-sm">
+                <div className="flex items-center justify-center mt-6 mb-4">
+                  <span className="block">
+                    <img src={step.icon} alt={step.title} className="w-20" />
+                  </span>
+                </div>
+                <h3 className="font-black text-[1.5rem] leading-tight text-[#222] px-4 mb-6">{step.title}</h3>
               </div>
-              <h3 className="font-semibold text-lg text-foreground px-4">{step.title}</h3>
             </div>
           ))}
         </div>
