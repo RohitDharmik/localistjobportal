@@ -1,7 +1,7 @@
 import { Search, Menu, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
+import icon from "../assets/icon.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,10 +11,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo and nav */}
         <div className="flex items-center gap-10">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center ">
             {/* Pin icon for logo */}
             {/* < */}
-            <MapPin color="#00AEEA" />
+            <img src={icon} alt="Localists Logo" className="w-5" />
+            {/* <MapPin color="#00AEEA" /> */}
             <span className="font-black text-2xl text-[#222] tracking-tight">localists</span>
           </div>
           <nav className="hidden md:flex items-center gap-7 text-[15px] font-medium text-[#222]">
