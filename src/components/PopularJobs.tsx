@@ -48,44 +48,43 @@ const PopularJobs = () => {
           </h2>
           <div className="flex gap-2">
             <button
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors"
+              className="w-10 h-10 rounded-full bg-[#b3e6fa] flex items-center justify-center shadow border border-[#b3e6fa] hover:bg-[#00AEEA]/20 transition-colors"
               onClick={handlePrev}
               aria-label="Previous job"
             >
-              <ChevronLeft className="w-5 h-5 text-foreground" />
+              <ChevronLeft className="w-5 h-5 text-[#00AEEA]" />
             </button>
             <button
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors"
+              className="w-10 h-10 rounded-full bg-[#b3e6fa] flex items-center justify-center shadow border border-[#b3e6fa] hover:bg-[#00AEEA]/20 transition-colors"
               onClick={handleNext}
               aria-label="Next job"
             >
-              <ChevronRight className="w-5 h-5 text-foreground" />
+              <ChevronRight className="w-5 h-5 text-[#00AEEA]" />
             </button>
           </div>
         </div>
 
         {/* Show only current job on mobile, all jobs in grid on desktop */}
-        <div
-          className="w-full"
-        >
+        <div className="w-full">
           <div className="lg:hidden flex gap-6 overflow-x-auto pb-2" style={{ WebkitOverflowScrolling: 'touch' }}>
             {[jobs[current]].map((job, index) => (
               <div
                 key={job.title}
-                className="min-w-[85vw] max-w-xs group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 mx-auto"
+                className="min-w-[85vw] max-w-xs flex-shrink-0 mx-auto rounded-2xl overflow-hidden shadow-lg bg-white border border-[#e0e7ef] flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <img
-                  src={job.image}
-                  alt={job.title}
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="text-primary-foreground font-medium text-sm mb-2 block">{job.title}</span>
-                  <Button variant="explore" size="sm" name="Explore">
-                    Explore
-                  </Button>
+                <div className="bg-[#00AEEA] px-6 py-4 text-white text-lg  text-center rounded-t-2xl">
+                  {job.title}
+                </div>
+                <div className="relative flex-1 flex flex-col">
+                  <img
+                    src={job.image}
+                    alt={job.title}
+                    className="w-full h-72 object-cover"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex justify-center w-full">
+                    <button className="bg-white text-[#222] font-bold rounded-full px-7 py-2 shadow-md border border-[#bbb] hover:bg-gray-100 transition-all text-base">Explore</button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -94,39 +93,39 @@ const PopularJobs = () => {
             {jobs.map((job, index) => (
               <div
                 key={job.title}
-                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="rounded-2xl overflow-hidden shadow-lg bg-[#00AEEA]  border border-[#e0e7ef] flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <img
-                  src={job.image}
-                  alt={job.title}
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="text-primary-foreground font-medium text-sm mb-2 block">{job.title}</span>
-                  <Button variant="explore" size="sm" name="Explore">
-                    Explore
-                  </Button>
+                <div className="bg-[#00AEEA] px-6 py-4 text-white text-lg font-bold text-center rounded-t-2xl">
+                  {job.title}
+                </div>
+                <div className="relative left-7  bac flex-1 flex flex-col">
+                  <img
+                    src={job.image}
+                    alt={job.title}
+                    className="w-full h-72 object-cover rounded-tl-3xl"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex justify-center w-full">
+                    <button className="bg-white text-[#222] font-bold rounded-full px-7 py-2 shadow-md border border-[#bbb] hover:bg-gray-100 transition-all text-base">Explore</button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-4 mt-8">
           {jobs.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-7 h-7 min-w-[24px] min-h-[24px] flex items-center justify-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary/60 ${
-                idx === current ? "bg-primary" : "bg-border"
+              className={`w-10 h-3 rounded-full transition-all duration-200 border-none focus:outline-none ${
+                idx === current ? "bg-[#222]" : "bg-[#e0e7ef]"
               }`}
               aria-label={`Go to job ${idx + 1}`}
               tabIndex={0}
-            >
-              <span className="sr-only">Go to job {idx + 1}</span>
-            </button>
+              style={{ minWidth: 40 }}
+            />
           ))}
         </div>
       </div>
