@@ -49,7 +49,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="default" size="lg" name="Get Started">
+          <Button style={{background:"#10C87B"}}  size="lg" name="Get Started" className="rounded-3xl">
             Get Started
           </Button>
         </div>
